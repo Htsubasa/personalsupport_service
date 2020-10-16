@@ -50,50 +50,7 @@ html{
 body{
   font-family: 'Noto Sans JP', sans-serif;
 
-  @charset "utf-8";
-  @import "reset";
-  
-  
-  $pc: 1100px; // PC
-  $tab: 768px; // タブレット
-  $sp: 560px;  // スマホ
-  $sp-second: 425px;  // スマホ
-  
-  @mixin pc {
-    @media (max-width: ($pc)) {
-      @content;
-    }
-  }
-  
-  
-  @mixin tab {
-    @media (max-width: ($tab)) {
-      @content;
-    }
-  }
-  @mixin sp {
-    @media (max-width: ($sp)) {
-      @content;
-    }
-  }
-  
-  @mixin sp-second {
-      @media (max-width: ($sp-second)) {
-        @content;
-      }
-    }
-  
-    
-  @mixin font-type {
-    font-family: 'Red Hat Display', sans-serif;
-  }
-  
-  html{
-  
-  
-  body{
-    font-family: 'Noto Sans JP', sans-serif;
-  
+
   
   header{
     position: fixed;
@@ -441,7 +398,9 @@ body{
   
   }/*btn-gnavi*/
   
-.btn-gnavi.hb-open span:nth-of-type(1) {
+  
+  
+ .btn-gnavi.hb-open span:nth-of-type(1) {
     -webkit-transform: translateY(10px) rotate(-45deg);
     transform: translateY(10px) rotate(-45deg);
     transition: 0.5s;
@@ -470,8 +429,90 @@ body{
     }
 
 
+    @include pc{
+      height: 73vw;
+  }
+
+  @include sp{
+    margin-bottom: 45px;
+    height: auto;
+  }
+
+  
+  .mainvisual_wrap_sp{
+    display: none;
+    @include sp{
+      display: block;
+    }
+    
+
+  .mainvisual_img_sp{
+      background-image: url(../img/front/mainvisual.png);
+      background-size: 100% 400px;
+      width: 100%;
+      height: 400px;
+}/*img*/
+
+
+    .mainvisual_text{
+      width: 93%;
+      margin:  0 auto;
+      margin-top: 40px;
+
+
+      h1{
+          font-size: 38px;
+          margin-bottom: 10px;
+
+
+          .blue_text{
+              color: #2C75FF;
+          }
+
+      }/*h1*/
+
+      .mainvisual_sub_text{
+          margin-bottom: 54px;
+          font-size: 14px;
+
+      }
+
+
+      .btn{
+          width: 334px;
+
+          a{
+              display: block;
+              text-align: center;
+              font-size: 16px;
+              padding: 22px 0px;
+              color: white;
+              background: linear-gradient(to right, #FF2E47, #FFAD88);
+              border-radius: 38px;  
+              
+          
+          }
+
+          a:hover{
+              opacity: 0.7;
+              transition: 0.6s;  
+          }
+      }
+    }/*text*/
+
+
+
+  }
+
+
   &-wrap{
-      display: flex;
+    display: flex;
+    
+
+    @include sp{
+      display: block;
+      display: none;
+    }
 
       .mainvisual_text{
         width: 50%;
@@ -1418,4 +1459,3 @@ body{
   }
   }/*body*/
   }
-  
