@@ -645,7 +645,14 @@ body{
         }
 
         @include sp{
+          height: 450px;
         }
+
+
+        @include sp-second(){
+          height: 500px;
+        }
+    
     
         .middle_card_title{
             color: #364E60;
@@ -755,6 +762,11 @@ body{
                     background: linear-gradient(to right, #FF2E47, #FFAD88);
                     border-radius: 30px;         
                 }
+            }
+
+            .btn:hover{
+              transition: .3s;
+              opacity: .8;
             }
 
         }/*block*/
@@ -1061,6 +1073,11 @@ body{
             }
         }
 
+        .btn:hover{
+          transition: .3s;
+          opacity: .8;
+        }
+
     }/*wrap*/
 }/*topic*/
 
@@ -1222,6 +1239,12 @@ body{
   
   
         }/*a*/  
+
+        a:hover{
+          transition: .8s;
+          opacity: 0.8;
+        }
+    
       }
   
       .right_button{
@@ -1255,6 +1278,12 @@ body{
         }
       
       }/*a*/
+
+      a:hover{
+        transition: .8s;
+        opacity: 0.8;
+      }
+  
   
       }
     }/*button_block*/
@@ -1335,6 +1364,12 @@ body{
               }
   
           }/*li*/
+
+          li:hover{
+            transition: .3s;
+            opacity: .8;
+          }
+
         
             li:last-child{
               border-right: none;
@@ -1400,6 +1435,12 @@ body{
     
               
           }/*li*/
+
+          li:hover{
+            transition: .3s;
+            opacity: .8;
+          }
+
         
             li:last-child{
               border-right: none;
