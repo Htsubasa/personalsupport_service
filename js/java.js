@@ -13,28 +13,24 @@ $(function(){
 
 $(function(){
 	$(".btn-gnavi").click(function(){
-		$(".header_nav").slideToggle(400);
+		$(".header-nav").slideToggle(400);
 	});
-	$(".header_nav li a").click(function(){
+	$(".header-nav li a").click(function(){
 		$(".btn-gnavi").css({display:"none"});
 	});
 });
 
 
-$(function(){
-  var pagetop = $('#page_top');
-  // ボタン非表示
-  pagetop.hide();
-  // 100px スクロールしたらボタン表示
-  $(window).scroll(function () {
-     if ($(this).scrollTop() > 100) {
-          pagetop.fadeIn();
-     } else {
-          pagetop.fadeOut();
-     }
-  });
-  pagetop.click(function () {
-     $('body, html').animate({ scrollTop: 0 }, 500);
-     return false;
-  });
-});
+
+
+
+$(function () {
+  var headerHight = 200; //ヘッダの高さ
+  $('a[href^="#"]').click(function(){
+      var href= $(this).attr("href");
+        var target = $(href == "#" || href == "" ? 'html' : href);
+         var position = target.offset().top-headerHight;
+      $("html, body").animate({scrollTop:position}, 550, "swing");
+         return false;
+    });
+ });
