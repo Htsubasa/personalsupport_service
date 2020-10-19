@@ -857,6 +857,30 @@ html body .mainvisual-wrap::before {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
+@media (max-width: 1100px) {
+  html body .mainvisual-wrap::before {
+    height: 50vw;
+  }
+}
+
+@media (max-width: 768px) {
+  html body .mainvisual-wrap::before {
+    height: 52vw;
+  }
+}
+
+@media (max-width: 560px) {
+  html body .mainvisual-wrap::before {
+    height: 54vw;
+  }
+}
+
+@media (max-width: 425px) {
+  html body .mainvisual-wrap::before {
+    height: 78vw;
+  }
+}
+
 html body .line-up {
   /*warap*/
 }

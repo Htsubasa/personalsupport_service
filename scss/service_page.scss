@@ -549,6 +549,24 @@ body{
       top: 0;
       left: 0;
       background-color: rgba(0,0,0,0.2);
+
+      @include pc{
+        height: 50vw;
+       }
+   
+       @include tab{
+        height: 52vw;
+       }
+   
+       @include sp{
+         height: 54vw;
+       }
+       @include sp-second{
+         height: 78vw;
+       }
+  
+       
+       
     }
 
 
