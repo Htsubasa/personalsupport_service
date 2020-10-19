@@ -978,7 +978,11 @@ html body .line-up-wrap .image_item_sp ul {
 
 @media (max-width: 425px) {
   html body .line-up-wrap .image_item_sp ul {
-    width: 335px;
+    max-width: 335px;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -999,7 +1003,8 @@ html body .line-up-wrap .image_item_sp ul li {
 
 @media (max-width: 425px) {
   html body .line-up-wrap .image_item_sp ul li {
-    width: 162px;
+    max-width: 162px;
+    width: 47vw;
     padding: 12px 10px;
     margin-bottom: 9px;
   }
@@ -1038,6 +1043,14 @@ html body .line-up-wrap .image_item_sp ul li a .item_text {
   html body .line-up-wrap .image_item_sp ul li a .item_text {
     font-size: 11px;
   }
+}
+
+html body .line-up-wrap .image_item_sp ul li:nth-child(odd) {
+  margin-right: 5px;
+}
+
+html body .line-up-wrap .image_item_sp ul li:nth-child(even) {
+  margin-left: 5px;
 }
 
 html body .line-up-wrap .image_item_sp ul li:hover {

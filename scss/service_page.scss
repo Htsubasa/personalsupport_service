@@ -646,7 +646,9 @@ body{
                 margin: 0 auto;
 
                 @include sp-second(){
-                    width: 335px;
+                    max-width: 335px;
+                    width: 100%;
+                    justify-content: center;
                 }
 
                 li{
@@ -660,10 +662,12 @@ body{
                     border-radius: 6px;
 
                     @include sp-second(){
-                        width: 162px;
-                        padding: 12px 10px;
-                        margin-bottom: 9px;
+                      max-width: 162px;
+                      width: 47vw;
+                      padding: 12px 10px;
+                      margin-bottom: 9px;
                     }
+
                     a{
                       display: flex;
                       align-items: center;
@@ -693,11 +697,20 @@ body{
                   }
                 }/*li*/
 
+                li:nth-child(odd){
+                  margin-right: 5px;
+                }
+                  
+                li:nth-child(even){
+                  margin-left: 5px;
+                }
+
 
                 li:hover{
                   opacity: .7;
                   transition: .3s;
                 }
+                
             }
         }
 
